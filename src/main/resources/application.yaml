@@ -1,4 +1,4 @@
-spring:
+spring123:
   datasource:
     url: jdbc:mysql://localhost:3306/springboot-rest
     password: y@y!nt123NG

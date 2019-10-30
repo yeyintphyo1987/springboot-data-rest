@@ -1,6 +1,7 @@
 package com.yyp.springbootrest.dto;
 
 import java.util.Date;
+import java.util.List;
 
 import com.yyp.springbootrest.entity.Voucher;
 
@@ -16,18 +17,20 @@ public class VoucherDto {
 	private Date date;
 	private boolean am;
 	private double totalAmount;
+	private List<UserNumberDto> userNumberDtoList;
 	
 	public VoucherDto() {
 	}
 
-	public VoucherDto(long id, long userId, Date date, boolean am, double totalAmount) {
+	public VoucherDto(long id, long userId, Date date, boolean am, double totalAmount, List<UserNumberDto> userNumberDtoList) {
 		this.id = id;
 		this.userId = userId;
 		this.date = date;
 		this.am = am;
 		this.totalAmount = totalAmount;
+		this.userNumberDtoList = userNumberDtoList;
 	}
-	
+
 	public VoucherDto(Voucher voucher) {
 		this.id = voucher.getId();
 		this.userId = voucher.getUserId();
@@ -75,5 +78,13 @@ public class VoucherDto {
 	public void setTotalAmount(double totalAmount) {
 		this.totalAmount = totalAmount;
 	}
-	
+
+	public List<UserNumberDto> getUserNumberDtoList() {
+		return userNumberDtoList;
+	}
+
+	public void setUserNumberDtoList(List<UserNumberDto> userNumberDtoList) {
+		this.userNumberDtoList = userNumberDtoList;
+	}
+
 }
